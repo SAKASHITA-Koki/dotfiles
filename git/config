@@ -1,0 +1,35 @@
+[core]
+  ignorecase = false
+[user]
+  name = SAKASHITA-Koki
+  email = sakashita.koki@gmail.com
+  signingkey = 774C4FA49EDAEFB6
+[init]
+  defaultBranch = main
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+[merge]
+  tool = nvim -d
+[push]
+  default = current
+[pull]
+  default = current
+  rebase = false
+[alias]
+  p     = push
+  a     = add
+  c     = commit
+  ch    = checkout
+  stat  = status
+  tree  = log --graph --abbrev-commit --decorate --format=format:'%C(blue bold)[%h] %C(red)%d %C(reset)%C(white)%s%C(reset)' --all
+  graph = log --graph --abbrev-commit --decorate --format=format:'%C(blue bold)[%h] %C(red)%d %C(reset)%C(white)%s %C(reset)%C(dim white)- %cs %an%C(reset)' --all
+  gr    = graph
+  slog  = log --pretty='format:%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)%d %C(cyan)[%an]' --date=iso
+[gpg]
+  program = gpg
+[commit]
+  gpgsign = true
+

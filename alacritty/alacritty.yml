@@ -1,0 +1,92 @@
+window:
+  dimentions:
+    x: 0
+    y: 0
+  padding:
+    x: 10
+    y: 0
+  decorations: none
+  startup_mode: Maximized
+
+font:
+  normal:
+    family: RobotoMono NF
+    style: Regular
+  size: 16.0
+  offset:
+    x: 0
+    y: 10
+
+cursor:
+  style:
+    shape: Block
+
+mouse:
+  hide_when_typing: true
+
+working_directory: Desktop
+
+# enable <C-S> key bindings
+#   ref: https://www.reddit.com/r/neovim/comments/mbj8m5/how_to_setup_ctrlshiftkey_mappings_in_neovim_and/
+key_bindings:
+  - { key: A, mods: Control|Shift, chars: "\x1b[65;5u" }
+  - { key: B, mods: Control|Shift, chars: "\x1b[66;5u" }
+  - { key: C, mods: Control|Shift, chars: "\x1b[67;5u" }
+  - { key: D, mods: Control|Shift, chars: "\x1b[68;5u" }
+  - { key: E, mods: Control|Shift, chars: "\x1b[69;5u" }
+  - { key: F, mods: Control|Shift, chars: "\x1b[70;5u" }
+  - { key: G, mods: Control|Shift, chars: "\x1b[71;5u" }
+  - { key: H, mods: Control|Shift, chars: "\x1b[72;5u" }
+  - { key: I, mods: Control|Shift, chars: "\x1b[73;5u" }
+  - { key: J, mods: Control|Shift, chars: "\x1b[74;5u" }
+  - { key: K, mods: Control|Shift, chars: "\x1b[75;5u" }
+  - { key: L, mods: Control|Shift, chars: "\x1b[76;5u" }
+  - { key: M, mods: Control|Shift, chars: "\x1b[77;5u" }
+  - { key: N, mods: Control|Shift, chars: "\x1b[78;5u" }
+  - { key: O, mods: Control|Shift, chars: "\x1b[79;5u" }
+  - { key: P, mods: Control|Shift, chars: "\x1b[80;5u" }
+  - { key: Q, mods: Control|Shift, chars: "\x1b[81;5u" }
+  - { key: R, mods: Control|Shift, chars: "\x1b[82;5u" }
+  - { key: S, mods: Control|Shift, chars: "\x1b[83;5u" }
+  - { key: T, mods: Control|Shift, chars: "\x1b[84;5u" }
+  - { key: U, mods: Control|Shift, chars: "\x1b[85;5u" }
+  - { key: V, mods: Control|Shift, chars: "\x1b[86;5u" }
+  - { key: W, mods: Control|Shift, chars: "\x1b[87;5u" }
+  - { key: X, mods: Control|Shift, chars: "\x1b[88;5u" }
+  - { key: Y, mods: Control|Shift, chars: "\x1b[89;5u" }
+  - { key: Z, mods: Control|Shift, chars: "\x1b[90;5u" }
+  - { key: F11, mods: Control, action: ToggleFullScreen }
+
+# https://github.com/seahal/iceberg_theme_for_alacritty/blob/master/iceberg.yml
+
+# Isnpired from Iceberg theme.
+colors:
+  primary:
+    background: "0x161821"
+    foreground: "0xD1D2D3"
+
+  cursor:
+    text: "0x161821"
+    cursor: "0xc6c8d1"
+
+  # Normal colors
+  normal:
+    black: "0x000000"
+    red: "0xE68E8E"
+    green: "0x83AC8E"
+    yellow: "0xF5B78A"
+    blue: "0x9BB8DC"
+    magenta: "0xBAACE2"
+    cyan: "0x00C5C7"
+    white: "0xC7C7C7"
+
+  # Bright colors
+  bright:
+    black: "0x676767"
+    red: "0xFF6D67"
+    green: "0x5FF967"
+    yellow: "0xFEFB67"
+    blue: "0x6871FF"
+    magenta: "0xFF76FF"
+    cyan: "0x5FFDFF"
+    white: "0xFEFFFF"
