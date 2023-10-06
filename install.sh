@@ -84,25 +84,44 @@ function _cargo_install() {
 }
 
 
+function _cargo_install_locked() {
+  if ! command -v "${2:-$1}" >/dev/null 2>&1; then
+    if ! command -v cargo >/dev/null 2>&1; then
+      install_rust
+    fi
+    cargo install $1 --locked
+    echo -e "${1:-$2} installed"
+  fi
+}
+
+
 function install_sheldon() {
   _cargo_install sheldon
 }
 
-
+# cat
 function install_bat() {
   _cargo_install bat
 }
 
+# ls
 function install_exa() {
   _cargo_install exa
 }
 
+# find
 function install_fd() {
   _cargo_install fd-find "fd"
 }
 
+# grep
 function install_rg() {
   _cargo_install ripgrep "rg"
+}
+
+# cd
+function install_zoxide() {
+  _cargo_install_locked zoxide "z"
 }
 
 
@@ -133,6 +152,11 @@ function install_python() {
 }
 
 
+function install_navi() {
+  _cargo_install navi
+}
+
+
 # ------------------------------
 
 
@@ -149,6 +173,12 @@ function setup() {
   install_node
   install_deno
   install_python
+  install_bat
+  install_exa
+  install_fd
+  install_rg
+  install_zoxide
+  install_navi
 }
 
 

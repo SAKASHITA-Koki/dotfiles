@@ -12,7 +12,7 @@ font:
   normal:
     family: RobotoMono NF
     style: Regular
-  size: 16.0
+  size: 17.0
   offset:
     x: 0
     y: 10
@@ -57,36 +57,36 @@ key_bindings:
   - { key: Z, mods: Control|Shift, chars: "\x1b[90;5u" }
   - { key: F11, mods: Control, action: ToggleFullScreen }
 
-# https://github.com/seahal/iceberg_theme_for_alacritty/blob/master/iceberg.yml
 
 # Isnpired from Iceberg theme.
 colors:
   primary:
-    background: "0x161821"
-    foreground: "0xD1D2D3"
+    background: '#161821'
+    foreground: '#D1D2D3'
 
   cursor:
-    text: "0x161821"
-    cursor: "0xc6c8d1"
+    text   : '#161821'
+    cursor : '#c6c8d1'
 
   # Normal colors
   normal:
-    black: "0x000000"
-    red: "0xE68E8E"
-    green: "0x83AC8E"
-    yellow: "0xF5B78A"
-    blue: "0x9BB8DC"
-    magenta: "0xBAACE2"
-    cyan: "0x00C5C7"
-    white: "0xC7C7C7"
+    black   : '#1e2132'
+    red     : '#e27878'
+    green   : '#b4be82'
+    yellow  : '#e2a478'
+    blue    : '#84a8c6'
+    magenta : '#a093c7'
+    cyan    : '#89b8c2'
+    white   : '#c6c8d1'
 
   # Bright colors
   bright:
-    black: "0x676767"
-    red: "0xFF6D67"
-    green: "0x5FF967"
-    yellow: "0xFEFB67"
-    blue: "0x6871FF"
-    magenta: "0xFF76FF"
-    cyan: "0x5FFDFF"
-    white: "0xFEFFFF"
+    black   : '#6b7089'
+    red     : '#e98989'
+    green   : '#c8ca8e'
+    yellow  : '#e9b189'
+    blue    : '#91acd1'
+    magenta : '#ada0d3'
+    cyan    : '#95c4ce'
+    white   : '#d2d4de'
+

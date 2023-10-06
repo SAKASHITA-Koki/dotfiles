@@ -21,25 +21,24 @@ github = "romkatv/zsh-defer"
 
 
 
-
-[plugins.rtx]
-inline = 'eval "$(rtx activate zsh)"'
-
-[plugins.starship]
-inline = 'eval "$(starship init zsh)"'
-
+[plugins.zshrc-lazy]
+local = '~/.config/zsh/zshrc-lazy'
+apply = [ 'defer' ]
 
 
 
 [plugins.zsh-autosuggestions]
 github = 'zsh-users/zsh-autosuggestions'
-apply = ['defer']
+apply = [ 'defer' ]
 
 [plugins.zsh-completions]
 github = 'zsh-users/zsh-completions'
-apply = ['defer']
+apply = [ 'defer' ]
 
 [plugins.zsh-syntax-highlighting]
 github = 'zsh-users/zsh-syntax-highlighting'
-apply = ['defer']
+apply = [ 'defer' ]
 
+[plugins.zsh-replace-multiple-dots]
+github = 'momo-lab/zsh-replace-multiple-dots'
+apply = [ 'defer' ]

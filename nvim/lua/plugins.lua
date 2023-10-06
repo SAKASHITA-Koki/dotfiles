@@ -120,17 +120,16 @@ require("lazy").setup({
   --   end
   -- },
 
-  {
-    "yuki-yano/fuzzy-motion.vim",
-    lazy = true,
-    keys = { "<LEADER>j" },
-    dependencies = {
-      "vim-denops/denops.vim",
-    },
-    config = function ()
-      vim.api.nvim_set_keymap('n', '<LEADER>j', ':FuzzyMotion<CR>', {})
-    end
-  },
+  -- {
+  --   "yuki-yano/fuzzy-motion.vim",
+  --   lazy = true,
+  --   keys = {
+  --     { '<LEADER>j', mode = 'n' },
+  --   },
+  --   config = function ()
+  --     vim.api.nvim_set_keymap('n', '<LEADER>j', ':FuzzyMotion<CR>', {})
+  --   end
+  -- },
 
   {
     "kazhala/close-buffers.nvim",
@@ -306,7 +305,8 @@ require("lazy").setup({
     lazy = true,
     event = "VimEnter",
     config = function()
-      require("auto-session").setup({
+      local auto_session = require('auto-session')
+      auto_session.setup({
         log_level = "error",
         auto_session_suppress_dirs = {
           "~/",
@@ -315,6 +315,18 @@ require("lazy").setup({
           "/",
         },
       })
+      local id = vim.api.nvim_create_augroup(
+        'AutoSessionGroup', { clear = true } )
+      vim.api.nvim_create_autocmd(
+        { 'BufWritePost' },
+        {
+          group = id,
+          desc = 'save session on BufWritePost',
+          callback = function()
+            auto_session.SaveSession()
+          end
+        }
+      )
     end,
   },
 
@@ -361,11 +373,9 @@ require("lazy").setup({
       require("plugins/mason")
     end,
     dependencies = {
-      { "williamboman/mason-lspconfig.nvim" },
       { "neovim/nvim-lspconfig" },
+      { "williamboman/mason-lspconfig.nvim" },
       { "ray-x/lsp_signature.nvim" },
-      -- { 'kkharji/lspsaga.nvim'},
-      -- 'hrsh7th/nvim-cmp',
       "j-hui/fidget.nvim",
       {
         url = 'https://git.sr.ht/~whynothugo/lsp_lines.nvim',
@@ -376,7 +386,6 @@ require("lazy").setup({
       },
     },
   },
-
 
   {
     "j-hui/fidget.nvim",
@@ -543,24 +552,26 @@ require("lazy").setup({
   --   },
   -- },
 
-  {
-    'vim-denops/denops.vim',
-    lazy = true,
-    config = function()
-      -- vim.fn['signature_help#enable']()
-      -- vim.fn['ddc#enable']()
-    end,
-    dependencies = {
-      -- 'matsui54/denops-signature_help',
-      -- 'Shougo/ddc.vim',
-      -- "yuki-yano/fuzzy-motion.vim",
-    },
-  },
+  -- {
+  --   'vim-denops/denops.vim',
+  --   lazy = false,
+  --   config = function()
+  --     -- vim.fn['signature_help#enable']()
+  --     -- vim.fn['ddc#enable']()
+  --   end,
+  --   dependencies = {
+  --     -- 'matsui54/denops-signature_help',
+  --     -- 'Shougo/ddc.vim',
+  --     -- 'yuki-yano/fuzzy-motion.vim',
+  --   },
+  -- },
 
   {
     "mattn/emmet-vim",
     lazy = true,
-    ft = { "html", "css", "sass", "scss", "javascriptreact", "typescriptreact" },
+    ft = {
+      "html", "css", "sass", "scss", "javascriptreact", "typescriptreact"
+    },
     config = function()
       require("plugins/emmet")
     end,

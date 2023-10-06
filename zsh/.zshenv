@@ -1,3 +1,9 @@
+export LANG="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+# export TERM=screen-256color
+export TERM='xterm-256color'
+
+
 export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
 export XDG_CACHE_HOME="${XDG_CACHE_HOME:-$HOME/.cache}"
 export XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
@@ -22,3 +28,6 @@ export TERMINFO="${XDG_DATA_HOME}/terminfo"
 
 # less
 export LESSHISTFILE="${XDG_STATE_HOME}/less/history"
+
+# navi
+export NAVI_CONFIG="$XDG_CONFIG_HOME/navi/config.yaml"

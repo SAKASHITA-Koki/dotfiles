@@ -1,5 +1,6 @@
 "${DOTFILES}/zsh/.zshenv", "${HOME}/.zshenv"
 "${DOTFILES}/zsh/.zshrc", "${ZDOTDIR}/.zshrc"
+"${DOTFILES}/zsh/zshrc-lazy/zshrc-lazy.zsh", "${ZDOTDIR}/zshrc-lazy/zshrc-lazy.zsh"
 "${DOTFILES}/tmux/tmux.conf", "${XDG_CONFIG_HOME}/tmux/tmux.conf"
 "${DOTFILES}/alacritty/alacritty.yml", "${XDG_CONFIG_HOME}/alacritty/alacritty.yml"
 "${DOTFILES}/nvim", "${XDG_CONFIG_HOME}/nvim"
@@ -7,3 +8,5 @@
 "${DOTFILES}/python/pythonrc.py", "${PYTHONSTARTUP}"
 "${DOTFILES}/git/config", "${XDG_CONFIG_HOME}/git/config"
 "${DOTFILES}/git/ignore", "${XDG_CONFIG_HOME}/git/ignore"
+"${DOTFILES}/zabrze/config.yaml", "${XDG_CONFIG_HOME}/zabrze/config.yaml"
+"${DOTFILES}/navi", "${XDG_CONFIG_HOME}/navi"
