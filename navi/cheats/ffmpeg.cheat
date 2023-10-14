@@ -1,0 +1,6 @@
+% ffmpeg, video
+# compress video
+ffmpeg -i "<input>" -r 30.0 -vf 'scale=if(gte(iw\,ih)\,min(720\,iw)\,-2):if(lt(iw\,ih)\,min(720\,ih)\,-2)' -an -crf 28 -hide_banner -loglevel warning "${$(echo "<input>")%.*}.mp4"
+$ input: find . \( -maxdepth 2 -name "*.mov" -o -name "*.avi" \) | fzf --preview "ffprobe {} 2>&1 | head -n 6"
+
+

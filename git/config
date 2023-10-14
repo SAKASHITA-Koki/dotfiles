@@ -2,8 +2,8 @@
   ignorecase = false
 [user]
   name = SAKASHITA-Koki
-  email = sakashita.koki@gmail.com
-  signingkey = 774C4FA49EDAEFB6
+  email = 59007706+SAKASHITA-Koki@users.noreply.github.com
+  signingkey = BEE448CDDAE628FA
 [init]
   defaultBranch = main
 [filter "lfs"]

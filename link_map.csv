@@ -10,3 +10,4 @@
 "${DOTFILES}/git/ignore", "${XDG_CONFIG_HOME}/git/ignore"
 "${DOTFILES}/zabrze/config.yaml", "${XDG_CONFIG_HOME}/zabrze/config.yaml"
 "${DOTFILES}/navi", "${XDG_CONFIG_HOME}/navi"
+"${DOTFILES}/navi/cheats", "${XDG_DATA_HOME}/navi"

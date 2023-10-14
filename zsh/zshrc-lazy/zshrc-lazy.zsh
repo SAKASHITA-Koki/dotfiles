@@ -68,19 +68,19 @@ if [[ "${OSTYPE}" == "darwin"* ]]; then
 fi
 
 
+# filter unnecessary history
+zshaddhistory() {
+    local line="${1%%$'\n'}"
+    [[ ! "$line" =~ "^(cd|ls|exit|clear|nvim)($| )" ]]
+}
+
+
 
 # ------------------------------
 # Aliases
 # ------------------------------
 
-alias x='exit'
-alias cl='clear'
-alias v='nvim'
-alias nv='nvim'
-alias bim='nvim'
-alias cim='nvim'
 alias tm='tmux'
-
 alias cat='bat'
 alias ls='exa'
 alias find='fd'

@@ -17,6 +17,8 @@
 !/alacritty/**
 !/git/
 !/git/**
+!/navi/
+!/navi/**
 !/nvim/
 !/nvim/**
 !/python/
@@ -25,5 +27,7 @@
 !/sheldon/**
 !/tmux/
 !/tmux/**
+!/zabrze/
+!/zabrze/**
 !/zsh/
 !/zsh/**

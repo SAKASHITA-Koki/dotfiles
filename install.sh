@@ -157,6 +157,11 @@ function install_navi() {
 }
 
 
+function install_zabrze() {
+  _cargo_install zabrze
+}
+
+
 # ------------------------------
 
 
@@ -179,6 +184,7 @@ function setup() {
   install_rg
   install_zoxide
   install_navi
+  install_zabrze
 }
 
 

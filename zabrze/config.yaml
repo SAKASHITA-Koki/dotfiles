@@ -1,0 +1,73 @@
+# ~/.config/zabrze/config.yaml
+
+abbrevs:
+
+  - name: '>/dev/null'
+    abbr: 'null'
+    snippet: '>/dev/null'
+    global: true
+
+  - name: now
+    abbr: now
+    snippet: $(date "+%Y%m%d%H%M%S")
+    evaluate: true
+    global: true
+
+  - name: today
+    abbr: td
+    snippet: $(date "+%Y%m%d")
+    evaluate: true
+    global: true
+
+  # ------------------------------
+  # aliases
+  # ------------------------------
+
+  - name: exit
+    abbr: x
+    snippet: exit
+
+  - name: clear
+    abbr: cl
+    snippet: clear
+
+  - name: nvim-n
+    abbr: n
+    snippet: nvim
+
+  - name: nvim-nv
+    abbr: nv
+    snippet: nvim
+
+  # ------------------------------
+  # git
+  # ------------------------------
+
+  - name: git
+    abbr: g
+    snippet: git
+
+  - name: git-status
+    abbr: gs
+    snippet: git status
+
+  - name: git-add all
+    abbr: ga
+    snippet: git add -A
+
+  - name: git-commit
+    abbr: gc
+    snippet: git commit
+
+  - name: git add
+    abbr: a
+    snippet: add
+    global: true
+    context: '^git\s'
+
+  - name: git commit
+    abbr: c
+    snippet: commit
+    global: true
+    context: '^git\s'
+
