@@ -1,0 +1,13 @@
+% gpg, key, list, show
+# list gpg keys
+gpg -k
+
+% gpg, encrypt
+# encrypt file
+gpg --output "<input>.encrypted.gpg" --encrypt --recipient "${mail}" "<input>"
+$ input: find . -maxdepth 2 | fzf -m --preview 'head -100 {}'
+
+% gpg, decrypt
+# decrypt file
+gpg --output "<input>.decrypted.gpg" --decrypt --recipient "${mail}" "<input>"
+$ input: find . -maxdepth 2 | fzf -m --preview 'head -100 {}'

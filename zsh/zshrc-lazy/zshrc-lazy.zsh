@@ -22,7 +22,6 @@ export GPG_TTY=$(tty)
 export EDITOR=nvim
 export OPENER=open
 export FZF_DEFAULT_OPTS="--cycle \
-   --keep-right \
    --border=sharp \
    --height=45% \
    --info=inline \
@@ -89,3 +88,11 @@ alias cd='z'
 alias zz='zi'
 
 alias pass="cat ${HOME}/.pass | fzf | cut -d ',' -f 4- | pbcopy"
+
+
+# ------------------------------
+# Variables
+# ------------------------------
+
+export mail='59007706+SAKASHITA-Koki@users.noreply.github.com'
+

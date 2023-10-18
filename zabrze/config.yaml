@@ -40,6 +40,16 @@ abbrevs:
     snippet: nvim
 
   # ------------------------------
+  # variables
+  # ------------------------------
+
+  - name: mail
+    abbr: mail
+    snippet: ${mail}
+    evaluate: true
+    global: true
+
+  # ------------------------------
   # git
   # ------------------------------
 
@@ -58,6 +68,10 @@ abbrevs:
   - name: git-commit
     abbr: gc
     snippet: git commit
+
+  - name: git-commit-now
+    abbr: gcc
+    snippet: git commit -m "$(date "+%Y%m%d%H%M%S")"
 
   - name: git add
     abbr: a
