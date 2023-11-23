@@ -27,6 +27,8 @@ export FZF_DEFAULT_OPTS="--cycle \
    --info=inline \
    --layout=reverse "
 
+# ghcup-env
+[ -f "/Users/sakashita/.local/share/ghcup/env" ] && source "/Users/sakashita/.local/share/ghcup/env"
 
 # ------------------------------
 # Functions
@@ -80,10 +82,10 @@ zshaddhistory() {
 # ------------------------------
 
 alias tm='tmux'
-alias cat='bat'
+# alias cat='bat'
 alias ls='exa'
-alias find='fd'
-alias grep='rg'
+# alias find='fd'
+# alias grep='rg'
 alias cd='z'
 alias zz='zi'
 

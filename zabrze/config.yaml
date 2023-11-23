@@ -49,6 +49,12 @@ abbrevs:
     evaluate: true
     global: true
 
+  - name: home
+    abbr: home
+    snippet: ${HOME}
+    evaluate: true
+    global: true
+
   # ------------------------------
   # git
   # ------------------------------

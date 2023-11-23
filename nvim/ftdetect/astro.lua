@@ -1,6 +1,6 @@
-
 vim.filetype.add({
-    extension = {
-        astro = "astro"
-    }
+  extension = {
+    astro = "astro"
+  }
 })
+

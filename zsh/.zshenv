@@ -8,6 +8,7 @@ export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
 export XDG_CACHE_HOME="${XDG_CACHE_HOME:-$HOME/.cache}"
 export XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
 export XDG_STATE_HOME="${XDG_STATE_HOME:-$HOME/.local/state}"
+export XDG_BIN_HOME="${XDG_BIN_HOME:-$HOME/.local/bin}"
 
 # zsh
 export ZDOTDIR="${XDG_CONFIG_HOME}/zsh"
@@ -19,6 +20,9 @@ export GNUPGHOME="${XDG_CONFIG_HOME}/gnupg"
 export RUSTUP_HOME="${XDG_CONFIG_HOME}/rustup"
 export CARGO_HOME="${XDG_CONFIG_HOME}/cargo"
 . "${CARGO_HOME}/env"
+
+# Haskell (GHCup)
+export GHCUP_USE_XDG_DIRS=true
 
 # python
 export PYTHONSTARTUP="${XDG_CONFIG_HOME}/python/pythonrc.py"

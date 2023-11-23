@@ -390,6 +390,7 @@ require("lazy").setup({
   {
     "j-hui/fidget.nvim",
     lazy = true,
+    tag = "legacy",
     config = function()
       require("fidget").setup({})
     end,
@@ -594,4 +595,14 @@ require("lazy").setup({
       })
     end,
   },
+
+
+  -- {
+  --   'wuelnerdotexe/vim-astro',
+  --   lazy = true,
+  --   ft = { 'astro' },
+  --   config = function()
+  --     vim.g.astro_typescript = 'enable'
+  --   end,
+  -- }
 })
