@@ -61,6 +61,7 @@ vim.api.nvim_create_autocmd(
       vim.keymap.set('x', 'm', '<Plug>(fern-action-rename)', options)
       vim.keymap.set('n', 'r', '<Plug>(fern-action-reload)', options)
       vim.keymap.set('n', 'q', ':<C-u>FernDo close -stay<CR>', options)
+      vim.keymap.set('n', 'D', '<Plug>(fern-action-copy)', options)
 
     end,
   }
