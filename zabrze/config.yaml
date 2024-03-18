@@ -91,3 +91,7 @@ abbrevs:
     global: true
     context: '^git\s'
 
+  - name: lazygit
+    abbr: lg
+    snippet: lazygit
+
