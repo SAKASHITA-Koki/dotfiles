@@ -11,12 +11,17 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.runtimepath:prepend(lazypath)
 
+
+local is_vscode = vim.g.vscode
+
+
 require("lazy").setup({
 
   {
     "cocopon/iceberg.vim",
     lazy = false,
     priority = 1000,
+    enabled = not is_vscode,
     config = function()
       require("plugins/colorscheme")
     end,
@@ -34,6 +39,7 @@ require("lazy").setup({
 
   {
     'nvim-lualine/lualine.nvim',
+    enabled = not is_vscode,
     config = function ()
       require("plugins/lualine")
     end
@@ -46,6 +52,7 @@ require("lazy").setup({
 
   {
     "lewis6991/gitsigns.nvim",
+    enabled = not is_vscode,
     lazy = true,
     event = "BufEnter",
     config = function ()
@@ -57,6 +64,7 @@ require("lazy").setup({
 
   {
     'norcalli/nvim-colorizer.lua',
+    enabled = not is_vscode,
     lazy = true,
     event = 'BufEnter',
     config = function ()
@@ -71,6 +79,7 @@ require("lazy").setup({
 
   {
     "simeji/winresizer",
+    enabled = not is_vscode,
     lazy = true,
     keys = "<C-e>", -- set to the same value as g:winresizer_start_key
     init = function()
@@ -133,6 +142,7 @@ require("lazy").setup({
 
   {
     "kazhala/close-buffers.nvim",
+    enabled = not is_vscode,
     lazy = true,
     event = "BufEnter",
     config = function ()
@@ -242,6 +252,7 @@ require("lazy").setup({
 
   {
     "Yggdroot/indentLine",
+    enabled = not is_vscode,
     lazy = true,
     keys = "\\\\",
     config = function()
@@ -268,6 +279,7 @@ require("lazy").setup({
 
   {
     "mvllow/modes.nvim",
+    enabled = not is_vscode,
     lazy = true,
     event = "BufEnter",
     config = function ()
@@ -283,6 +295,7 @@ require("lazy").setup({
 
   {
     "kevinhwang91/nvim-hlslens",
+    enabled = not is_vscode,
     lazy = true,
     event = "BufEnter",
     config = function()
@@ -302,6 +315,7 @@ require("lazy").setup({
 
   {
     "rmagatti/auto-session",
+    enabled = not is_vscode,
     lazy = true,
     event = "VimEnter",
     config = function()
@@ -445,6 +459,7 @@ require("lazy").setup({
 
   {
     "nvim-telescope/telescope.nvim",
+    enabled = not is_vscode,
     lazy = true,
     keys = {
       "<LEADER>f",
@@ -470,6 +485,7 @@ require("lazy").setup({
 
   {
     "lambdalisue/fern-renderer-nerdfont.vim",
+    enabled = not is_vscode,
     lazy = true,
     dependencies = {
       "lambdalisue/nerdfont.vim",
@@ -481,6 +497,7 @@ require("lazy").setup({
 
   {
     "lambdalisue/fern.vim",
+    enabled = not is_vscode,
     lazy = true,
     keys = {
       "<LEADER>t",
