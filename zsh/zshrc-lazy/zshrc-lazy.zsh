@@ -28,7 +28,7 @@ export FZF_DEFAULT_OPTS="--cycle \
    --layout=reverse "
 
 # ghcup-env
-[ -f "/Users/sakashita/.local/share/ghcup/env" ] && source "/Users/sakashita/.local/share/ghcup/env"
+[ -f "${HOME}/.local/share/ghcup/env" ] && source "${HOME}/.local/share/ghcup/env"
 
 # ------------------------------
 # Functions
