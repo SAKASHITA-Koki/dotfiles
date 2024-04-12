@@ -95,3 +95,7 @@ abbrevs:
     abbr: lg
     snippet: lazygit
 
+  - name: lazygit
+    abbr: gl
+    snippet: lazygit
+
